@@ -9,6 +9,12 @@ import java.util.List;
 
 
 public class JavaBasics {
+  public static void arrayCpy(char[] src, char[] dest) {
+    for(int i = 0; i < src.length; i++) {
+      dest[i] = src[i];
+    }
+  }
+
   public static void main(String[] args) {
     // create a list
     String[] cars = {"audi", "benz", "camry", "toyota", "honda", "hyundai"};
@@ -90,5 +96,27 @@ public class JavaBasics {
       }
       System.out.print("\n");
     }
+
+    //array challenge
+    //copy array from source to destination
+    char[] src = {'A', 'B', 'C', 'D', 'E', 'F', 'G'};
+    char[] dest = new char[src.length];
+    char[] newDest = new char[src.length];
+    JavaBasics.arrayCpy(src, dest);
+    System.out.println(dest);
+    System.arraycopy(src, 0, newDest, 0, src.length);
+    System.out.println(newDest);
+    char charToDel = 'D';
+    char[] srcCp = new char[src.length - 1];
+    int j = 0;
+    for (int v = 0; v < src.length; v++) {
+      if (src[v] == charToDel) {
+        continue;
+      }
+      srcCp[j] = src[v];
+      j++;
+    }
+    src = srcCp;
+    System.out.println(src);
   }
 }
