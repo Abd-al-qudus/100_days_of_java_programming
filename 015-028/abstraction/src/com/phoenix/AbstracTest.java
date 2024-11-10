@@ -8,6 +8,7 @@
 
 package com.phoenix;
 
+@SuppressWarnings("unused")
 abstract class Abstract {
   private void hello() {
     System.out.println("this is gonna work after abstraction");

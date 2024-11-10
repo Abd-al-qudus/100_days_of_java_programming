@@ -30,7 +30,7 @@ class PhoenixException extends Exception {
 
 public class Exceptions {
 
-  static void createException {
+  static void createException() throws Exception {
     throw new Exception();
   }
 

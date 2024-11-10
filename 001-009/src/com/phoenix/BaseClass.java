@@ -16,6 +16,7 @@ public class BaseClass {
     System.out.println("PUBLIC, I can be seen everywhere");
   }
 
+  @SuppressWarnings("unused")
   private void privateTest() {
     System.out.println("PRIVATE, I can be seen here");
   }

@@ -20,5 +20,6 @@ public class JavaIOBuffer {
     System.out.print("Enter your CGPA: ");
     double cgpa = Double.parseDouble(scanner.nextLine()); //handle overflow by default
     System.out.printf("welcome %s, %s. You are %d years old and have %f as your cgpa\n", first, last, age, cgpa);
+    scanner.close();
   }
 }
